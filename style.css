@@ -1,0 +1,100 @@
+:root {
+  --bg: black;
+  --display-bg: white;
+  --text: white;
+  --button-bg: #001524;
+  --orange: orange;
+  --blue: #4181FF;
+  --red: red;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.theme-toggle button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.calculator {
+  background-color: var(--bg);
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+}
+
+.display {
+  background-color: var(--display-bg);
+  color: black;
+  height: 80px;
+  font-size: 30px;
+  padding: 20px;
+  text-align: right;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+button {
+  font-size: 28px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--button-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button.red {
+  color: var(--red);
+}
+
+button.orange {
+  background-color: var(--orange);
+  grid-row: span 2;
+}
+
+button.tall {
+  height: 100%;
+}
+
+button.equal {
+  grid-column: span 2;
+  background-color: var(--blue);
+}
+
+/* Light Theme */
+.light {
+  --bg: #f0f0f0;
+  --display-bg: #ffffff;
+  --text: #000000;
+  --button-bg: #e0e0e0;
+  --orange: orange;
+  --blue: #4181FF;
+  --red: red;
+}
