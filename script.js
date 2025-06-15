@@ -9,6 +9,7 @@ function clearDisplay() {
   display.innerText = '';
 }
 
+
 function calculate() {
   try {
     display.innerText = eval(display.innerText);
