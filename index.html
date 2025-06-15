@@ -4,41 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Calculator</title>
+  <!-- Linking the CSS file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Theme toggle button in top-right corner -->
   <div class="theme-toggle">
     <button id="theme-btn" onclick="toggleTheme()">🌙</button>
   </div>
 
+  <!-- Calculator container -->
   <div class="calculator">
-    <div id="display" class="display"></div>
-    <div class="buttons">
-      <button onclick="clearDisplay()" class="red">C</button>
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="appendToDisplay('%')">%</button>
-      <button onclick="appendToDisplay('/')">÷</button>
+    <!-- Display area with expression (input) and result (live output) -->
+    <div class="display">
+      <div id="expression" class="expression"></div>
+      <div id="result" class="result"></div>
+    </div>
 
+    <!-- All calculator buttons -->
+    <div class="buttons">
+      <!-- Row 1 -->
+      <button onclick="clearDisplay()" class="red">C</button>
+      <button onclick="appendToDisplay('%')" class="green">%</button>
+      <button onclick="appendToDisplay('/')" class="green">÷</button>
+      <button onclick="backspace()">⌫</button>
+
+      <!-- Row 2 -->
       <button onclick="appendToDisplay('7')">7</button>
       <button onclick="appendToDisplay('8')">8</button>
       <button onclick="appendToDisplay('9')">9</button>
-      <button onclick="appendToDisplay('*')">×</button>
+      <button onclick="appendToDisplay('*')" class="green">×</button>
 
+      <!-- Row 3 -->
       <button onclick="appendToDisplay('4')">4</button>
       <button onclick="appendToDisplay('5')">5</button>
       <button onclick="appendToDisplay('6')">6</button>
-      <button onclick="appendToDisplay('-')">−</button>
+      <button onclick="appendToDisplay('-')" class="green">−</button>
 
+      <!-- Row 4 -->
       <button onclick="appendToDisplay('1')">1</button>
       <button onclick="appendToDisplay('2')">2</button>
       <button onclick="appendToDisplay('3')">3</button>
-      <button onclick="appendToDisplay('+')" class="tall orange">+</button>
+      <button onclick="appendToDisplay('+')" class="green">+</button>
 
-      <button onclick="calculate()" class="equal">=</button>
+      <!-- Row 5 -->
+      <button onclick="toggleSign()">+/-</button>
+      <button onclick="appendToDisplay('0')">0</button>
       <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="calculate()" class="equal">=</button>
     </div>
   </div>
 
+  <!-- Linking the JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
