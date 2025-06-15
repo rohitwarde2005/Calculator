@@ -1,3 +1,4 @@
+/* Define variables for colors and themes */
 :root {
   --bg: black;
   --display-bg: white;
@@ -8,6 +9,7 @@
   --red: red;
 }
 
+/* Set basic page style */
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -21,12 +23,14 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* Theme toggle button position */
 .theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
 }
 
+/* Style the theme button */
 .theme-toggle button {
   font-size: 24px;
   background: none;
@@ -35,6 +39,7 @@ body {
   color: var(--text);
 }
 
+/* Calculator box */
 .calculator {
   background-color: var(--bg);
   padding: 20px;
@@ -42,24 +47,43 @@ body {
   width: 350px;
 }
 
+/* Display area styles */
 .display {
   background-color: var(--display-bg);
   color: black;
   height: 80px;
-  font-size: 30px;
-  padding: 20px;
-  text-align: right;
+  padding: 10px 20px;
   border-radius: 10px;
   margin-bottom: 20px;
   overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+/* Expression text (small) */
+.expression {
+  font-size: 22px;
+  text-align: right;
+  color: gray;
+}
+
+/* Result text (bold) */
+.result {
+  font-size: 30px;
+  text-align: right;
+  font-weight: bold;
+  color: black;
+}
+
+/* Button grid layout */
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
 }
 
+/* Default button style */
 button {
   font-size: 28px;
   padding: 20px;
@@ -70,31 +94,23 @@ button {
   cursor: pointer;
 }
 
+/* Red and green buttons */
 button.red {
   color: var(--red);
 }
-
-button.orange {
-  background-color: var(--orange);
-  grid-row: span 2;
+button.green {
+  color: #00FF00;
 }
 
-button.tall {
-  height: 100%;
-}
-
+/* Equals button special color */
 button.equal {
-  grid-column: span 2;
   background-color: var(--blue);
 }
 
-/* Light Theme */
+/* Light theme overrides */
 .light {
   --bg: #f0f0f0;
   --display-bg: #ffffff;
   --text: #000000;
   --button-bg: #e0e0e0;
-  --orange: orange;
-  --blue: #4181FF;
-  --red: red;
 }
